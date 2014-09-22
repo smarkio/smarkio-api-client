@@ -26,6 +26,6 @@ $operation = 'delete';
 $relation = new Relation($originId, $destinyId, $type, $api_token);
 
 // send the request
-$response = $relation->send(null, $operation);
+$response = $relation->send($operation);
 
 echo "API Response: '{$response}'\n";

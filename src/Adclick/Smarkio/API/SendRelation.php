@@ -14,7 +14,7 @@ namespace Adclick\Smarkio\API;
 class SendRelation
 {
 
-    const API_BASE_URL = 'http://smark.io/api.php/';
+    const API_BASE_URL = 'https://smark.io/api.php/';
     const API_VERSION = 'v1';
 
     public static function send($api_token, $post_fields, $operation, $api_url = null)
