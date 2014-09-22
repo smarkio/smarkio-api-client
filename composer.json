@@ -1,0 +1,20 @@
+{
+    "name": "adclick/smarkio-manager",
+    "type": "library",
+    "description": "Accelerator to communicate with the Smark.io Internal API",
+    "keywords": ["smarkio","lead","adclick"],
+    "homepage":"https://github.com/smarkio/smarkio-api",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adclick",
+            "email": "developers@adclick.pt",
+            "homepage": "http://www.adclickint.com/",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": { "Adclick\\Smarkio\\API\\": "src/Adclick/Smarkio/API/" }
+    }
+}
