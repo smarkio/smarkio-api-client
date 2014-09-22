@@ -1,5 +1,5 @@
 {
-    "name": "adclick/smarkio-manager",
+    "name": "adclick/smarkio-api",
     "type": "library",
     "description": "Accelerator to communicate with the Smark.io Internal API",
     "keywords": ["smarkio","lead","adclick"],

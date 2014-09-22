@@ -12,7 +12,7 @@ Add the following to your composer.json file in order to fetch the latest stable
 ```
 {
     "require": {
-        "adclick/leadoffice-api": "*"
+        "adclick/smarkio-api": "*"
     }
 }
 ```
@@ -27,7 +27,7 @@ require '[COMPOSER_VENDOR_PATH]/autoload.php';
 Contents
 --------
 
-- src/Adclick/Smarkio/API - Code to interact with the Smarkio relations API.
+- src/Adclick/Smarkio/API - Code to interact with the Smarkio Internal API.
 - examples/ - Some examples on how to use this accelerator.
 
 Before you start
@@ -60,7 +60,7 @@ $operation = 'add';
 $relation = new Relation($originId, $destinyId, $type, $api_token);
 
 // send the request
-$response = $relation->send(null, $operation);
+$response = $relation->send($operation);
 
 ```
 
@@ -84,5 +84,5 @@ $operation = 'delete';
 $relation = new Relation($originId, $destinyId, $type, $api_token);
 
 // send the request
-$response = $relation->send(null, $operation);
+$response = $relation->send($operation);
 ```
