@@ -18,7 +18,7 @@ class SendRelation
 
         $api_token = urlencode($api_token);
         $url = "{$base_api_url}api.php/" . self::API_VERSION . "/{$api_token}/relation/"."{$operation}/";
-        error_log($url);
+
         /* eg: https://smark.io/api.php/v1/XPTO000123/relation/add/ */
         /* eg: https://smark.io/api.php/v1/XPTO000123/relation/delete/ */
 
