@@ -5,7 +5,7 @@ namespace Smarkio\API;
 class SendRelation
 {
 
-    const API_BASE_URL = 'https://smark.io/api.php/';
+    const API_BASE_URL = 'https://smark.io/';
     const API_VERSION = 'v1';
 
     public static function send($api_token, $post_fields, $operation, $api_url = null)
@@ -17,8 +17,8 @@ class SendRelation
         }
 
         $api_token = urlencode($api_token);
-        $url = "{$base_api_url}" . self::API_VERSION . "/{$api_token}/relation/"."{$operation}/";
-
+        $url = "{$base_api_url}api.php/" . self::API_VERSION . "/{$api_token}/relation/"."{$operation}/";
+        error_log($url);
         /* eg: https://smark.io/api.php/v1/XPTO000123/relation/add/ */
         /* eg: https://smark.io/api.php/v1/XPTO000123/relation/delete/ */
 
