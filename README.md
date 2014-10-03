@@ -1,7 +1,7 @@
 #Smark.io API
 =========================
 
-One accelerator to communicate with © Smark.io API to manage Lead Relations
+An accelerator to communicate with © Smark.io API to manage Lead Relations
 
 Installation and usage with Composer
 ----------
@@ -12,7 +12,7 @@ Add the following to your composer.json file in order to fetch the latest stable
 ```
 {
     "require": {
-        "adclick/smarkio-api": "*"
+        "smarkio/smarkio-api": "*"
     }
 }
 ```
@@ -27,7 +27,7 @@ require '[COMPOSER_VENDOR_PATH]/autoload.php';
 Contents
 --------
 
-- src/Adclick/Smarkio/API - Code to interact with the Smarkio Internal API.
+- src/Smarkio/API - Code to interact with the Smarkio Internal API.
 - examples/ - Some examples on how to use this accelerator.
 
 Before you start
@@ -43,6 +43,7 @@ You need to obtain one API token to use the API. This token is bound to each use
 
 ```
 $api_token = 'YOUR API TOKEN HERE';
+$my_smarkio_url = 'YOUR SMARK.IO URL HERE';
 
 //The ID of the first lead of the relation
 $originId = '359680';
@@ -60,7 +61,7 @@ $operation = 'add';
 $relation = new Relation($originId, $destinyId, $type, $api_token);
 
 // send the request
-$response = $relation->send($operation);
+$response = $relation->send($operation,$my_smarkio_url);
 
 ```
 
@@ -68,6 +69,8 @@ $response = $relation->send($operation);
 
 ```
 $api_token = 'YOUR API TOKEN HERE';
+$my_smarkio_url = 'YOUR SMARK.IO URL HERE';
+
 //The ID of the first lead of the relation
 $originId = '359680';
 
@@ -84,5 +87,5 @@ $operation = 'delete';
 $relation = new Relation($originId, $destinyId, $type, $api_token);
 
 // send the request
-$response = $relation->send($operation);
+$response = $relation->send($operation,$my_smarkio_url);
 ```

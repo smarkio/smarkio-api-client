@@ -1,14 +1,14 @@
 <?php
 /*
- * An example on how to create a Lead Feedback and how to use the API
- * to send it to LeadOffice.
+ * An example on how to create a Lead Relation on Smark.io
  */
 
-require __DIR__ . '/../src/Adclick/Smarkio/API/Relation.php';
+require __DIR__ . '/../src/Smarkio/API/Relation.php';
 
-use Adclick\Smarkio\API\Relation;
+use Smarkio\API\Relation;
 
 $api_token = 'INSERT YOUR TOKEN HERE';
+$my_smarkio_url = 'INSERT YOUR SMARK.IO URL HERE';
 
 //The ID of the first lead of the relation
 $originId = '477173';
@@ -26,6 +26,6 @@ $operation = 'add';
 $relation = new Relation($originId, $destinyId, $type, $api_token);
 
 // send the request
-$response = $relation->send($operation);
+$response = $relation->send($operation,$my_smarkio_url);
 
 echo "API Response: '{$response}'\n";

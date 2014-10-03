@@ -1,15 +1,6 @@
 <?php
-/**
- *
- *
- * @author     Vítor Santos <vitor.santos@adclick.pt>
- * @copyright  2014 Adclick
- * @license    [SMARKIO_URL_LICENSE_HERE]
- *
- * [SMARKIO_DISCLAIMER]
- */
 
-namespace Adclick\Smarkio\API;
+namespace Smarkio\API;
 
 class SendRelation
 {
