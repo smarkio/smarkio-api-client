@@ -89,3 +89,5 @@ $relation = new Relation($originId, $destinyId, $type, $api_token);
 // send the request
 $response = $relation->send($operation,$my_smarkio_url);
 ```
+
+
