@@ -1,5 +1,5 @@
 {
-    "name": "smarkio/smarkio-api",
+    "name": "smarkio/smarkio-api-client",
     "type": "library",
     "description": "Accelerator to communicate with the Smark.io Internal API",
     "keywords": ["smarkio","lead","api"],
