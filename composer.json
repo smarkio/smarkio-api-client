@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Accelerator to communicate with the Smark.io Internal API",
     "keywords": ["smarkio","lead","api"],
-    "homepage":"https://github.com/smarkio/smarkio-api",
+    "homepage":"https://github.com/smarkio/smarkio-api-client",
     "license": "MIT",
     "authors": [
         {
