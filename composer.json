@@ -1,20 +1,30 @@
 {
-    "name": "smarkio/smarkio-api-client",
-    "type": "library",
-    "description": "Accelerator to communicate with the Smark.io Internal API",
-    "keywords": ["smarkio","lead","api"],
-    "homepage":"https://github.com/smarkio/smarkio-api-client",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Smark.io",
-            "email": "developers@smark.io",
-            "homepage": "http://smark.io/",
-            "role": "Developer"
-        }
-    ],
-    "minimum-stability": "stable",
-    "autoload": {
-        "psr-4": { "Smarkio\\API\\": "src/Smarkio/API/" }
+  "name": "smarkio/smarkio-api-client",
+  "type": "library",
+  "description": "Accelerator to communicate with the Smark.io Internal API",
+  "keywords": [
+    "smarkio",
+    "lead",
+    "api"
+  ],
+  "homepage": "https://github.com/smarkio/smarkio-api-client",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Smark.io",
+      "email": "developers@smark.io",
+      "homepage": "http://smark.io/",
+      "role": "Developer"
     }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {"Smarkio\\API\\": "src/Smarkio/API/"}
+  },
+  "require": {
+    "guzzle/guzzle": "~3.7"
+  },
+  "config": {
+    "vendor-dir": "lib/vendor"
+  }
 }
