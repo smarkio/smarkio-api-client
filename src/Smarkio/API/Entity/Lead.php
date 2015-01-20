@@ -16,10 +16,10 @@ namespace Smarkio\API\Entity;
  * @package Smarkio\API\Entity
  * @property
  *
- * @property int lead_id
+ * @property int    lead_id
  * @property string lead_fist_name
  * @property string lead_last_name
- * @property int lead_integration_status_id
+ * @property int    lead_integration_status_id
  * @property string lead_integration_status
  * @property string lead_status
  * @property string lead_integration_at
@@ -92,6 +92,7 @@ class Lead
         'website_created_at'                  => self::DATETIME_TYPE,
         'website_updated_at'                  => self::DATETIME_TYPE,
         'lead_url'                            => self::STRING_TYPE,
+        'additional_attributes'               => self::ARRAY_TYPE,
     );
 
     function __construct(array $values)
@@ -105,9 +106,9 @@ class Lead
 
     function __get($name)
     {
-        if (array_key_exists($name, $this->_data))
+        if (isset(self::$_valid_keys[$name]))
         {
-            return $this->_data[$name];
+            return isset($this->_data[$name]) ? $this->_data[$name] : null;
         }
 
         $trace = debug_backtrace();
@@ -122,21 +123,22 @@ class Lead
 
     function __set($name, $value)
     {
-        $type = isset(self::$_valid_keys[$name])?self::$_valid_keys[$name]:null;
-        switch($type){
+        $type = isset(self::$_valid_keys[$name]) ? self::$_valid_keys[$name] : null;
+        switch ($type)
+        {
             case self::INT_TYPE:
 
-                $value = is_numeric($value)?intval($value):null;
+                $value = is_numeric($value) ? intval($value) : null;
                 break;
             case self::STRING_TYPE:
                 break;
             case self::ARRAY_TYPE:
                 break;
             case self::DATETIME_TYPE:
-                $value = \DateTime::createFromFormat('Y-m-d H:i:s',$value);
+                $value = \DateTime::createFromFormat('Y-m-d H:i:s', $value);
                 break;
             case self::DATE_TYPE:
-                $value = \DateTime::createFromFormat('Y-m-d',$value);
+                $value = \DateTime::createFromFormat('Y-m-d', $value);
                 break;
             default:
                 return;
