@@ -48,6 +48,8 @@ namespace Smarkio\API\Entity;
  * @property string lead_url
  * @property array  additional_attributes
  * @property string lead_creation_at
+ * @property int    supplier_id
+ * @property string supplier_name
  */
 class Lead
 {
@@ -93,6 +95,8 @@ class Lead
         'website_updated_at'                  => self::DATETIME_TYPE,
         'lead_url'                            => self::STRING_TYPE,
         'additional_attributes'               => self::ARRAY_TYPE,
+        'supplier_id'                         => self::INT_TYPE,
+        'supplier_name'                       => self::STRING_TYPE,
     );
 
     function __construct(array $values)
