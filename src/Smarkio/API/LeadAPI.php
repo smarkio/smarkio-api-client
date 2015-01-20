@@ -62,7 +62,7 @@ class LeadAPI
         if ($response->getStatusCode() === 200)
         {
             $result = json_decode($response->getBody(true), true);
-            if ($result)
+            if (is_array($result) && isset($result['lead']))
             {
                 return new Lead($result['lead']);
             }
@@ -116,7 +116,7 @@ class LeadAPI
         if ($response->getStatusCode() === 200)
         {
             $result = json_decode($response->getBody(true), true);
-            if ($result)
+            if (is_array($result) && isset($result['leads']))
             {
                 $leads = array();
                 foreach($result['leads'] as $lead){
